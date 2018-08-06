@@ -78,6 +78,7 @@ def main():
             break
         else:
             pass
+            
         binary = preprocess(frame)
         cv2.imshow('binary', binary.astype(float))
         edges = line_extraction(binary)
