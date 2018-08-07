@@ -94,6 +94,8 @@ def main():
                      iteration_time=time()-start_time))
         error_prior = error 
         print('output:', output)
+        # If the line is in the center, the robot drives straight.
+        # Given the Heisenberg uncertantity principle it's impossible.
         if center_of_line == 320:
             drive(speed, speed)
         elif center_of_line < 320:
