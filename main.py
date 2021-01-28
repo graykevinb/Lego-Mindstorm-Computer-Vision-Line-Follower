@@ -37,7 +37,7 @@ def preprocess(data):
     binary = grayscale > 75
     # Data is inverted for the next step
     inverted_binary = np.invert(binary)
-    # There is two lines that absolutely beautiful, this is one of them.
+    # There is two lines that are absolutely beautiful, this is one of them.
     #This code combines both rows into one, reducing noise.
     return np.array(list(map(lambda x, y: x or y, 
         inverted_binary[0], inverted_binary[1])))
@@ -62,7 +62,6 @@ def PID_Loop(input, error_prior=0, Kp=0.0, Ki=0.00, Kd=0,
         + Kd*derivative))
 
 def main():
-    # The functions are okay, but the main function is literal trash.
     BP.offset_motor_encoder(BP.PORT_B, BP.get_motor_encoder(BP.PORT_B))
     BP.offset_motor_encoder(BP.PORT_C, BP.get_motor_encoder(BP.PORT_C))
     speed = 100
